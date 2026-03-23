@@ -13,7 +13,7 @@ const Index = () => {
       <SkillsSection />
       <ContactSection />
       <footer className="py-8 px-8 text-center font-mono text-sm text-muted-foreground border-t border-border">
-        <p>© {new Date().getFullYear()} Your Name. Built with vintage vibes & modern code.</p>
+        <p>Coded with 💻 and ☕ by Yu Ning. © {new Date().getFullYear()} </p>
       </footer>
     </div>
   );

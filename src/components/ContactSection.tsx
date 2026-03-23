@@ -17,21 +17,21 @@ const ContactSection = () => {
             <span className="italic">Get in Touch</span>
           </h2>
           <p className="font-serif text-xl text-muted-foreground mb-12 max-w-[500px]">
-            Have a project in mind, or just want to connect? Drop me a message — my inbox is always open.
+            Got an idea? A bug to squash? Or just wanna talk tech? I'm in. My inbox is always open.
           </p>
 
           <div className="space-y-6">
             <div>
               <h4 className="uppercase tracking-widest text-xs font-semibold text-muted-foreground">Email</h4>
-              <p className="font-mono text-lg mt-1">hello@yourname.dev</p>
+              <p className="font-mono text-lg mt-1">yapyuning0824@gmail.com</p>
             </div>
             <div>
               <h4 className="uppercase tracking-widest text-xs font-semibold text-muted-foreground">GitHub</h4>
-              <p className="font-mono text-lg mt-1">github.com/yourname</p>
+              <p className="font-mono text-lg mt-1">github.com/YapYuNing08</p>
             </div>
             <div>
               <h4 className="uppercase tracking-widest text-xs font-semibold text-muted-foreground">LinkedIn</h4>
-              <p className="font-mono text-lg mt-1">linkedin.com/in/yourname</p>
+              <p className="font-mono text-lg mt-1">linkedin.com/in/yap-yu-ning-08n</p>
             </div>
           </div>
         </div>

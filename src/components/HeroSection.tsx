@@ -7,11 +7,13 @@ const HeroSection = () => {
         {/* Content */}
         <div className="z-10 lg:pl-16 text-center lg:text-left">
           <h1 className="font-serif text-6xl md:text-7xl lg:text-[5rem] leading-[0.85] tracking-tight font-medium mb-8">
-            <span className="block">Hello, I'm</span>
-            <span className="block italic -ml-1">Your Name.</span>
+            <span className="block ">Hello I'm</span>
+            <span className="block italic -ml-1">Yu Ning</span>
           </h1>
-          <p className="font-serif text-xl md:text-2xl leading-snug mb-8 max-w-[480px] tracking-tight text-muted-foreground mx-auto lg:mx-0">
-            Software engineering student crafting digital experiences with the precision of vintage machines and the power of modern code.
+          <p className="font-serif text-xl md:text-2xl leading-snug mb-8 max-w-[600px] tracking-tight text-muted-foreground mx-auto lg:mx-0">
+            Software engineering student. Tech enthusiast. Problem solver. 
+            <br />
+            Passionate about solving complex problems, learning new technologies, and writing code that makes a real impact.
           </p>
           <div className="flex gap-4 items-center justify-center lg:justify-start">
             <a
@@ -34,11 +36,11 @@ const HeroSection = () => {
             </div>
             <div>
               <h4 className="uppercase tracking-widest text-xs font-semibold">Education</h4>
-              <p className="font-mono mt-2 text-foreground">CS Student</p>
+              <p className="font-mono mt-2 text-foreground">Software Engineering Student</p>
             </div>
             <div>
               <h4 className="uppercase tracking-widest text-xs font-semibold">Location</h4>
-              <p className="font-mono mt-2 text-foreground">Your City</p>
+              <p className="font-mono mt-2 text-foreground">Selangor</p>
             </div>
           </div>
         </div>

@@ -1,26 +1,26 @@
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "Full-stack online store with payment integration, user auth, and real-time inventory management.",
-    tech: ["React", "Node.js", "PostgreSQL"],
+    title: "Peer Support System",
+    description: "A safe, interactive platform for university students to seek emotional support, track their mental well-being, and connect anonymously through interest-based forums.",
+    tech: ["React", "Firebase"],
     color: "#468CCF",
   },
   {
-    title: "AI Chat Assistant",
-    description: "Conversational AI tool built with natural language processing for automated customer support.",
-    tech: ["Python", "FastAPI", "OpenAI"],
+    title: "Multilingual AI for Public Services",
+    description: "An AI-driven solution designed to break down language barriers and make essential public services easily accessible to diverse, multilingual communities.",
+    tech: ["React Native", "Expo", "Python", "FastAPI", "Llama", "Groq", "ChromaDB"],
     color: "#E57D25",
   },
   {
-    title: "Task Management App",
-    description: "Collaborative project management tool with drag-and-drop boards and real-time updates.",
-    tech: ["TypeScript", "React", "Firebase"],
+    title: "Food Ordering System",
+    description: "A full-stack web application that provides a seamless user experience for browsing menus, placing orders, and managing food deliveries.",
+    tech: ["HTML", "CSS", "JavaScript", "Django", "Python", "SQLite"],
     color: "#63B548",
   },
   {
-    title: "Portfolio Generator",
-    description: "CLI tool that generates developer portfolios from GitHub data and custom templates.",
-    tech: ["Go", "CLI", "GitHub API"],
+    title: "Parking Lot Management System",
+    description: "A GUI system that streamlines vehicle tracking, automates billing, dynamic fine management, and generates comprehensive administrative reports for parking facilities.",
+    tech: ["Java", "Java Swing", "SQLite"],
     color: "#9C4595",
   },
 ];
@@ -33,7 +33,7 @@ const ProjectsSection = () => {
           <span className="italic">Projects</span>
         </h2>
         <p className="font-serif text-xl text-muted-foreground mb-16 max-w-[600px]">
-          A curated selection of things I've built — from weekend experiments to semester-long endeavors.
+          Some of the cool stuff I've been working on lately. Feel free to click around and see what I've been coding
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

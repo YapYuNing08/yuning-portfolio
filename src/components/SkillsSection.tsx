@@ -1,19 +1,19 @@
 const skillCategories = [
   {
     title: "Languages",
-    items: ["TypeScript", "Python", "Java", "Go", "SQL", "C++"],
+    items: ["Python", "Java", "TypeScript", "C", "C++", "C#"],
   },
   {
-    title: "Frontend",
-    items: ["React", "Next.js", "Tailwind CSS", "HTML/CSS", "Figma"],
+    title: "Web/App Development",
+    items: ["HTML", "CSS", "JavaScript", "React",  "React Native", "Tailwind CSS", "Django"],
   },
   {
-    title: "Backend",
-    items: ["Node.js", "Express", "FastAPI", "PostgreSQL", "MongoDB"],
+    title: "Database",
+    items: ["Firebase", "SQLite", "PostgreSQL", "MySQL"],
   },
   {
-    title: "Tools & DevOps",
-    items: ["Git", "Docker", "AWS", "CI/CD", "Linux", "Vim"],
+    title: "Tools",
+    items: ["Git", "GitHub", "Figma", "CI/CD", "Google AI Studio"],
   },
 ];
 
@@ -25,7 +25,7 @@ const SkillsSection = () => {
           <span className="italic">Skills</span>
         </h2>
         <p className="font-serif text-xl text-muted-foreground mb-16 max-w-[600px]">
-          The tools and technologies in my toolkit — always expanding, always sharpening.
+          The tools and technologies in my toolkit - always expanding, always sharpening.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
