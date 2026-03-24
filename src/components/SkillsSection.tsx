@@ -5,7 +5,7 @@ const skillCategories = [
   },
   {
     title: "Web/App Development",
-    items: ["HTML", "CSS", "JavaScript", "React",  "React Native", "Tailwind CSS", "Django"],
+    items: ["HTML", "CSS", "JavaScript", "React",  "React Native", "Django"],
   },
   {
     title: "Database",

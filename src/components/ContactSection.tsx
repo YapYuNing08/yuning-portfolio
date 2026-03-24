@@ -2,11 +2,37 @@ import { useState } from "react";
 
 const ContactSection = () => {
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSent(true);
-    setTimeout(() => setSent(false), 3000);
+    setLoading(true);
+    
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    try {
+      // REPLACE "YOUR_FORM_ID" with your actual Formspree ID (e.g., "xabcd123")
+      const response = await fetch("https://formspree.io/f/myknezvr", {
+        method: "POST",
+        body: data,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        setSent(true);
+        form.reset(); // Clears the form fields after successful send
+        setTimeout(() => setSent(false), 3000);
+      } else {
+        alert("Oops! There was a problem submitting your form.");
+      }
+    } catch (error) {
+      alert("Oops! There was a network error submitting your form.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -23,15 +49,21 @@ const ContactSection = () => {
           <div className="space-y-6">
             <div>
               <h4 className="uppercase tracking-widest text-xs font-semibold text-muted-foreground">Email</h4>
-              <p className="font-mono text-lg mt-1">yapyuning0824@gmail.com</p>
+              <a className="font-mono text-lg mt-1 hover:text-primary transition-colors block" href="mailto:yapyuning0824@gmail.com">
+                yapyuning0824@gmail.com
+              </a>
             </div>
             <div>
               <h4 className="uppercase tracking-widest text-xs font-semibold text-muted-foreground">GitHub</h4>
-              <p className="font-mono text-lg mt-1">github.com/YapYuNing08</p>
+              <a className="font-mono text-lg mt-1 hover:text-primary transition-colors block" href="https://github.com/YapYuNing08" target="_blank" rel="noreferrer">
+                github.com/YapYuNing08
+              </a>
             </div>
             <div>
               <h4 className="uppercase tracking-widest text-xs font-semibold text-muted-foreground">LinkedIn</h4>
-              <p className="font-mono text-lg mt-1">linkedin.com/in/yap-yu-ning-08n</p>
+              <a className="font-mono text-lg mt-1 hover:text-primary transition-colors block" href="https://www.linkedin.com/in/yap-yu-ning-08n/" target="_blank" rel="noreferrer">
+                linkedin.com/in/yap-yu-ning-08n
+              </a>
             </div>
           </div>
         </div>
@@ -44,6 +76,7 @@ const ContactSection = () => {
               </label>
               <input
                 type="text"
+                name="name" // REQUIRED BY FORMSPREE
                 required
                 className="w-full bg-card border border-border rounded-lg px-4 py-3 font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-foreground/20"
                 placeholder="Ada Lovelace"
@@ -55,6 +88,7 @@ const ContactSection = () => {
               </label>
               <input
                 type="email"
+                name="email" // REQUIRED BY FORMSPREE
                 required
                 className="w-full bg-card border border-border rounded-lg px-4 py-3 font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-foreground/20"
                 placeholder="ada@example.com"
@@ -65,6 +99,7 @@ const ContactSection = () => {
                 Message
               </label>
               <textarea
+                name="message" // REQUIRED BY FORMSPREE
                 required
                 rows={5}
                 className="w-full bg-card border border-border rounded-lg px-4 py-3 font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-foreground/20 resize-none"
@@ -73,9 +108,10 @@ const ContactSection = () => {
             </div>
             <button
               type="submit"
-              className="bg-primary text-primary-foreground px-8 py-4 text-xl font-serif rounded-lg border-2 border-primary hover:bg-transparent hover:text-primary transition-all duration-200 cursor-pointer"
+              disabled={loading || sent}
+              className="bg-primary text-primary-foreground px-8 py-4 text-xl font-serif rounded-lg border-2 border-primary hover:bg-transparent hover:text-primary transition-all duration-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {sent ? "Message Sent ✓" : "Send Message"}
+              {loading ? "Sending..." : sent ? "Message Sent ✓" : "Send Message"}
             </button>
           </form>
         </div>
