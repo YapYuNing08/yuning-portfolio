@@ -35,12 +35,12 @@ const HeroSection = () => {
               <p className="font-mono mt-2 text-foreground">Open to Work</p>
             </div>
             <div>
-              <h4 className="uppercase tracking-widest text-xs font-semibold">Education</h4>
-              <p className="font-mono mt-2 text-foreground">Software Engineering Student</p>
-            </div>
-            <div>
               <h4 className="uppercase tracking-widest text-xs font-semibold">Location</h4>
               <p className="font-mono mt-2 text-foreground">Selangor</p>
+            </div>
+            <div>
+              <h4 className="uppercase tracking-widest text-xs font-semibold">Role</h4>
+              <p className="font-mono mt-2 text-foreground">Software Engineering Student</p>
             </div>
           </div>
         </div>

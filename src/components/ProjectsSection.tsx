@@ -5,28 +5,28 @@ const projects = [
     title: "Peer Support System",
     description: "A safe, interactive platform for university students to seek emotional support, track their mental well-being, and connect anonymously through interest-based forums.",
     tech: ["React", "Firebase"],
-    color: "#468CCF",
+    color: "#5b93c7",
     links: { github: "https://github.com/YapYuNing08/PeerSupportSystem", demo: "https://peersupportsystem.web.app/", media: "https://www.youtube.com/watch?v=Nzou_sNH5Oc" } // Add these!
   },
   {
-    title: "Multilingual AI for Public Services",
+    title: "Multilingual AI for Public Services in Malaysia",
     description: "An AI-driven solution designed to break down language barriers and make essential public services easily accessible to diverse, multilingual communities.",
     tech: ["React Native", "Expo", "Python", "FastAPI", "Llama", "Groq"],
-    color: "#E57D25",
+    color: "#cc874f",
     links: { github: "https://github.com/YapYuNing08/vhack_multilingual_ai", demo: "#", media: "https://youtu.be/UN4LSzk9MWU" }
   },
   {
     title: "Food Ordering System",
     description: "A full-stack web application that provides a seamless user experience for browsing menus, placing orders, and managing food deliveries.",
     tech: ["HTML", "CSS", "JavaScript", "Django", "Python", "SQLite"],
-    color: "#63B548",
+    color: "#8ea77a",
     links: { github: "https://github.com/YapYuNing08/CuppaClick", demo: "#", media: "#" }
   },
   {
     title: "Parking Lot Management System",
     description: "A GUI system that streamlines vehicle tracking, automates billing, dynamic fine management, and generates comprehensive administrative reports for parking facilities.",
     tech: ["Java", "Java Swing", "SQLite"],
-    color: "#8a5775",
+    color: "#736085",
     links: { github: "https://github.com/Y3ee/parking-lot-management-system", demo: "#", media: "#" }
   },
 ];

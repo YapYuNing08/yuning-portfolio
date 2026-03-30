@@ -12,8 +12,8 @@ const skillCategories = [
     items: ["Firebase", "SQLite", "PostgreSQL", "MySQL"],
   },
   {
-    title: "Tools",
-    items: ["Git", "GitHub", "Figma", "CI/CD", "Google AI Studio"],
+    title: "Dev Tools",
+    items: ["Git", "GitHub", "Google AI Studio", "Figma", "ChatGPT", "Claude"],
   },
 ];
 
@@ -25,7 +25,9 @@ const SkillsSection = () => {
           <span className="italic">Skills</span>
         </h2>
         <p className="font-serif text-xl text-muted-foreground mb-16 max-w-[600px]">
-          The tools and technologies in my toolkit - always expanding, always sharpening.
+          The tools and technologies in my toolkit.
+          <br />
+          Always expanding, always sharpening.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
