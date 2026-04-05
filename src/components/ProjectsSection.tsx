@@ -66,7 +66,24 @@ const ProjectsSection = () => {
           y: 0,
           opacity: 1,
           duration: 0.8,
-          stagger: 0.15, // Creates that beautiful domino effect
+          stagger: 0.15,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".projects-grid",
+            start: "top 85%",
+          },
+        }
+      );
+
+      // 3. Fade in the "View More on GitHub" button slightly after the folders drop
+      gsap.fromTo(
+        ".github-link-anim",
+        { y: 20, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.6,
+          delay: 0.4, // Wait for the folders to start cascading first
           ease: "power2.out",
           scrollTrigger: {
             trigger: ".projects-grid",
@@ -81,11 +98,9 @@ const ProjectsSection = () => {
   }, []);
 
   return (
-    // Added ref and overflow-hidden
     <section id="projects" ref={sectionRef} className="py-24 px-8 overflow-hidden">
       <div className="max-w-[1200px] mx-auto">
         
-        {/* Added 'project-header' class */}
         <h2 className="project-header font-serif text-5xl md:text-6xl font-medium mb-4 tracking-tight">
           <span className="italic">Projects</span>
         </h2>
@@ -93,11 +108,9 @@ const ProjectsSection = () => {
           Some of the cool stuff I've been working on lately. Feel free to click around and see what I've been coding.
         </p>
 
-        {/* Added 'projects-grid' class for the trigger point */}
         <div className="projects-grid grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16">
           {projects.map((project, i) => (
             
-            // Added 'project-folder' class to animate each individual item
             <div key={i} className="project-folder group relative w-full flex flex-col pt-16">
               
               {/* BACK FLAP OF THE FOLDER */}
@@ -168,6 +181,23 @@ const ProjectsSection = () => {
             </div>
           ))}
         </div>
+
+        {/* NEW: GitHub "View More" Button added below the grid */}
+        <div className="github-link-anim mt-20 text-center">
+          <a 
+            href="https://github.com/YapYuNing08" 
+            target="_blank" 
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 font-mono text-sm tracking-widest uppercase border border-border px-8 py-4 rounded-lg hover:bg-foreground hover:text-background transition-all duration-300 group"
+          >
+            <span>View More on GitHub</span>
+            {/* Arrow icon that slides slightly to the right on hover */}
+            <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+
       </div>
     </section>
   );
