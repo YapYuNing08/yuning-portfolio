@@ -34,18 +34,19 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section id="home" ref={sectionRef} className="min-h-screen flex items-center justify-center px-8 py-16 overflow-hidden">
+    <section id="home" ref={sectionRef} className="min-h-screen flex items-center justify-center px-8 py-16 overflow-hidden bg-primary/5">
       <div className="w-full max-w-[1400px] grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] items-center gap-8">
         
         {/* Content */}
-        <div className="z-10 lg:pl-16 text-center lg:text-left">
+        <div className="z-10 lg:pl-16 text-center lg:text-left pt-8 lg:pt-0">
           <h1 className="font-serif text-6xl md:text-7xl lg:text-[5rem] leading-[0.85] tracking-tight font-medium mb-8">
             <span className="hero-text-anim block">Hello I'm</span>
             <span className="hero-text-anim block italic -ml-1 text-primary">Yu Ning</span>
           </h1>
           
           <p className="hero-text-anim font-serif text-xl md:text-2xl leading-snug mb-8 max-w-[600px] tracking-tight text-muted-foreground mx-auto lg:mx-0">
-            Software engineering student. Tech enthusiast. Problem solver.
+            Tech enthusiast. Problem solver.
+            <br />
             Passionate about solving complex problems, learning new technologies, and writing code that makes a real impact.
           </p>
           
@@ -92,7 +93,7 @@ const HeroSection = () => {
             - hover:-translate-y-4 makes it float up when touched/hovered
             - hover:scale-[0.90] makes it slightly pop outward
           */}
-          <div className="scale-[0.85] transition-all duration-500 ease-out hover:-translate-y-4 hover:scale-[0.90] cursor-pointer w-full flex justify-center">
+          <div className="scale-[0.65] sm:scale-[0.75] md:scale-[0.85] transition-all duration-500 ease-out hover:-translate-y-4 hover:scale-[0.90] cursor-pointer w-full flex justify-center">
             <RetroComputer />
           </div>
         </div>

@@ -13,7 +13,7 @@ const projects = [
   {
     title: "Multilingual AI for Public Services in Malaysia",
     description: "An AI-driven solution designed to break down language barriers and make essential public services easily accessible to diverse, multilingual communities.",
-    tech: ["React Native", "Expo", "Python", "FastAPI", "Llama", "Groq"],
+    tech: ["React Native", "Expo", "Python", "FastAPI", "Llama", "Groq", "ChromaDB"],
     color: "#cc874f",
     links: { github: "https://github.com/YapYuNing08/vhack_multilingual_ai", demo: "#", media: "https://youtu.be/UN4LSzk9MWU" }
   },

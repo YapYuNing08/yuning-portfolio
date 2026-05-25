@@ -13,12 +13,16 @@ const skillCategories = [
   },
   {
     title: "Database",
-    items: ["Firebase", "SQLite", "PostgreSQL", "MySQL"],
+    items: ["Firebase", "SQLite", "PostgreSQL", "MySQL", "Microsoft SQL Server"],
   },
   {
     title: "Dev Tools",
-    items: ["Git", "GitHub", "Google AI Studio", "Figma", "ChatGPT", "Claude"],
+    items: ["Git", "GitHub", "Google Workspace", "Microsoft Office", "Figma", "Sanity", "Vercel"],
   },
+  {
+    title: "AI Tools",
+    items: ["Claude Code", "Google AI Studio", "ChatGPT", "GitHub Copilot", "Manus", "Lovable"],
+  }
 ];
 
 const SkillsSection = () => {
@@ -108,7 +112,7 @@ const SkillsSection = () => {
         </p>
 
         {/* Added "skills-grid" class for the trigger point */}
-        <div className="skills-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="skills-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
           {skillCategories.map((cat, i) => (
             // Added "skill-category" class to stagger these containers
             <div key={i} className="skill-category">

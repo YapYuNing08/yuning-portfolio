@@ -56,9 +56,9 @@ const RetroComputer = () => {
                   boxShadow: "inset 0 0 20px rgba(0,0,0,1)",
                 }}
               >
-                <div className="absolute inset-[10px] z-[2] font-mono p-4 text-sm" style={{ color: "#fff", textShadow: "0 0 2px rgba(255,255,255,0.5)" }}>
+                <div className="absolute inset-[10px] z-[2] font-mono p-4 text-sm" style={{ color: "#00FF00", textShadow: "0 0 5px rgba(0,255,0,0.3)" }}>
                   <div className="flex h-full">
-                    <div className="w-[30%] border-r border-white/20 pr-2 text-[10px] text-gray-400">
+                    <div className="w-[30%] border-r border-white/20 pr-2 text-[11px] text-gray-300">
                       <div className="flex items-center gap-1 mb-1.5"><span className="w-2 h-2 rounded-full bg-gray-500" /> System</div>
                       <div className="flex items-center gap-1 mb-1.5"><span className="w-2 h-2 rounded-full" style={{ background: "#468CCF" }} /> Disk A</div>
                       <div className="flex items-center gap-1 mb-1.5"><span className="w-2 h-2 rounded-full" style={{ background: "#E57D25" }} /> Trash</div>
@@ -66,14 +66,14 @@ const RetroComputer = () => {
                       <div className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-gray-500" /> Think</div>
                     </div>
                     <div className="flex-1 pl-2 flex flex-col">
-                      <span className="text-[10px] text-gray-400">FigOS 1.0</span>
-                      <div className="bg-white text-black rounded-sm p-1 mt-2 text-[10px] font-mono" style={{ boxShadow: "2px 2px 0 rgba(0,0,0,0.5)" }}>
-                        <div className="border-b border-dotted border-black mb-1 font-bold flex justify-between">
-                          <span>Untitled.txt</span><span>[x]</span>
+                      <span className="text-[11px] text-gray-300">FigOS 1.0</span>
+                      <div className="bg-black text-green-400 rounded-sm p-1.5 mt-2 text-[12px] font-mono" style={{ boxShadow: "2px 2px 0 rgba(0,255,0,0.2)" }}>
+                        <div className="border-b border-dashed border-green-400 mb-1 font-bold flex justify-between">
+                          <span>Welcome.txt</span><span>[x]</span>
                         </div>
-                        <div className="font-mono text-[10px] leading-tight text-gray-800">
+                        <div className="font-mono text-[12px] leading-snug text-green-400">
                           <pre className="whitespace-pre-wrap">{typedText}</pre>
-                          <span className="inline-block w-2 h-3.5 bg-black" style={{ animation: "blink 1s step-end infinite" }} />
+                          <span className="inline-block w-2 h-3.5 bg-green-400" style={{ animation: "blink 1s step-end infinite" }} />
                         </div>
                       </div>
                     </div>
