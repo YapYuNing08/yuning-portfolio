@@ -63,7 +63,7 @@ const HeroSection = () => {
           <div className="mt-16 grid grid-cols-2 gap-8 max-w-[400px] mx-auto lg:mx-0">
             <div className="hero-stat-anim">
               <h4 className="uppercase tracking-widest text-xs font-semibold text-muted-foreground">Focus</h4>
-              <p className="font-mono mt-2 text-foreground font-medium">Full-Stack Dev</p>
+              <p className="font-mono mt-2 text-foreground font-medium">Full-Stack Development</p>
             </div>
             <div className="hero-stat-anim">
               <h4 className="uppercase tracking-widest text-xs font-semibold text-muted-foreground">Status</h4>
@@ -76,12 +76,12 @@ const HeroSection = () => {
               </p>
             </div>
             <div className="hero-stat-anim">
-              <h4 className="uppercase tracking-widest text-xs font-semibold text-muted-foreground">Location</h4>
-              <p className="font-mono mt-2 text-foreground font-medium">Selangor</p>
+              <h4 className="uppercase tracking-widest text-xs font-semibold text-muted-foreground">Study</h4>
+              <p className="font-mono mt-2 text-foreground font-medium">Software Engineering</p>
             </div>
             <div className="hero-stat-anim">
               <h4 className="uppercase tracking-widest text-xs font-semibold text-muted-foreground">Role</h4>
-              <p className="font-mono mt-2 text-foreground font-medium">Software Engineering Student</p>
+              <p className="font-mono mt-2 text-foreground font-medium">Intern & Freelancer</p>
             </div>
           </div>
         </div>

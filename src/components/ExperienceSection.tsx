@@ -7,6 +7,7 @@ const education = [
     period: "Aug 2024 – Present",
     title: "Bachelor of Computer Science (Honours) (Software Engineering)",
     place: "Multimedia University, Cyberjaya",
+    logo: "/MMU-logo.png",
   },
 ];
 
@@ -15,6 +16,7 @@ const experience = [
     period: "Jul 2026 – Present",
     title: "Product Manager Intern",
     place: "Ant International",
+    logo: "/ant-logo.png",
   },
 ];
 
@@ -23,7 +25,7 @@ const ExperienceGroup = ({
   entries,
 }: {
   label: string;
-  entries: { period: string; title: string; place: string }[];
+  entries: { period: string; title: string; place: string; logo: string }[];
 }) => (
   <div className="mb-12 last:mb-0">
     <h3 className="uppercase tracking-widest text-xs font-semibold mb-4 text-muted-foreground">
@@ -33,7 +35,7 @@ const ExperienceGroup = ({
       {entries.map((entry, index) => (
         <div
           key={index}
-          className="exp-row group flex flex-col md:flex-row md:items-start justify-between gap-4 py-8 border-b border-border hover:bg-card/50 transition-colors duration-300 px-4 -mx-4 rounded-lg cursor-default"
+          className="exp-row group flex flex-col md:flex-row md:items-center justify-between gap-4 py-8 border-b border-border hover:bg-card/50 transition-colors duration-300 px-4 -mx-4 rounded-lg cursor-default"
         >
           <div className="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-12">
             {/* Period */}
@@ -49,9 +51,11 @@ const ExperienceGroup = ({
 
           {/* Place */}
           <div className="mt-2 md:mt-0 flex items-center gap-4 shrink-0">
-            <span className="font-mono text-sm uppercase tracking-widest text-muted-foreground bg-secondary px-3 py-1 rounded-full">
-              {entry.place}
-            </span>
+            <img
+              src={entry.logo}
+              alt={entry.place}
+              className="w-auto object-contain h-10 md:h-12"
+            />
           </div>
         </div>
       ))}
