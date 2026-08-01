@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 const education = [
   {
     period: "Aug 2024 – Present",
-    title: "Bachelor of Computer Science (Honours) (Software Engineering)",
+    title: "Bachelor of Computer Science (Honours) in Software Engineering",
     place: "Multimedia University, Cyberjaya",
     logo: "/MMU-logo.png",
   },

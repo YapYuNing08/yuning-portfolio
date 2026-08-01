@@ -5,6 +5,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 const competitions = [
   {
     year: "2026",
+    name: "Hackattack 3.0",
+    role: "UTAR Hackathon",
+  },
+  {
+    year: "2026",
     name: "AWS CendekiAwan Competition",
     role: "AWS AI Application Competition",
   },

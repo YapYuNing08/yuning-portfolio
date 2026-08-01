@@ -9,11 +9,11 @@ const skillCategories = [
   },
   {
     title: "Web/App Development",
-    items: ["HTML", "CSS", "JavaScript", "React", "React Native", "Django"],
+    items: ["HTML", "CSS", "JavaScript", "React", "React Native", "Django", ".NET", "Next.js"],
   },
   {
     title: "Database",
-    items: ["Firebase", "SQLite", "PostgreSQL", "MySQL", "Microsoft SQL Server"],
+    items: ["Firebase", "SQLite", "PostgreSQL", "MySQL", "Microsoft SQL Server", "Supabase"],
   },
   {
     title: "Dev Tools",
