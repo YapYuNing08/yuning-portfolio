@@ -43,7 +43,7 @@ const ContactSection = () => {
             <span className="italic">Get in Touch</span>
           </h2>
           <p className="font-serif text-xl text-muted-foreground mb-12 max-w-[500px]">
-            Got an idea? A bug to squash? Or just wanna talk tech? I'm in. My inbox is always open.
+            Got an idea? A project to build? Or just wanna talk tech? I'm in. My inbox is always open.
           </p>
 
           <div className="space-y-6">

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import RetroComputer from "./RetroComputer";
+import Typewriter from "./Typewriter";
 
 const HeroSection = () => {
   const sectionRef = useRef(null);
@@ -45,8 +46,13 @@ const HeroSection = () => {
           </h1>
           
           <p className="hero-text-anim font-serif text-xl md:text-2xl leading-snug mb-8 max-w-[600px] tracking-tight text-muted-foreground mx-auto lg:mx-0">
-            Tech enthusiast. Problem solver.
-            <br />
+            <Typewriter
+              prefix="I'm a "
+              texts={["tech enthusiast.", "problem solver.", "cat lover."]}
+              className="block min-h-[1.5em] text-foreground"
+              typedClassName="italic text-primary"
+              cursorClassName="font-mono text-retro-orange"
+            />
             Passionate about solving complex problems, learning new technologies, and writing code that makes a real impact.
           </p>
           
