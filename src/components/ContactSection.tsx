@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Check, Loader2, Send } from "lucide-react";
 
 const ContactSection = () => {
   const [sent, setSent] = useState(false);
@@ -107,13 +108,39 @@ const ContactSection = () => {
               />
             </div>
             <div className="flex items-end gap-4 flex-wrap">
-              <button
-                type="submit"
-                disabled={loading || sent}
-                className="bg-primary text-primary-foreground px-8 py-4 text-xl font-serif rounded-lg border-2 border-primary hover:bg-transparent hover:text-primary transition-all duration-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {loading ? "Sending..." : sent ? "Message Sent ✓" : "Send Message"}
-              </button>
+              <div className="relative group flex">
+                <img
+                  src="/cat-look.png"
+                  alt=""
+                  aria-hidden="true"
+                  className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 -mb-4 w-20 h-20 object-contain opacity-0 translate-y-2 scale-90 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-hover:scale-100"
+                />
+                <button
+                  type="submit"
+                  disabled={loading || sent}
+                  className="group/btn inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 text-xl font-serif rounded-lg border-2 border-primary hover:bg-transparent hover:text-primary transition-all duration-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {loading ? (
+                    <>
+                      <Loader2 className="w-5 h-5 animate-spin" aria-hidden="true" />
+                      Sending...
+                    </>
+                  ) : sent ? (
+                    <>
+                      <Check className="w-5 h-5" aria-hidden="true" />
+                      Message Sent
+                    </>
+                  ) : (
+                    <>
+                      <Send
+                        className="w-5 h-5 transition-transform duration-200 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5"
+                        aria-hidden="true"
+                      />
+                      Send Message
+                    </>
+                  )}
+                </button>
+              </div>
 
               <div className="flex items-center gap-3">
                 <img src="/cat-sad.png" alt="Sad cat" className="w-24 h-24 object-contain" />

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { ArrowDownRight } from "lucide-react";
 import RetroComputer from "./RetroComputer";
 import Typewriter from "./Typewriter";
 
@@ -57,12 +58,24 @@ const HeroSection = () => {
           </p>
           
           <div className="hero-text-anim flex gap-4 items-center justify-center lg:justify-start">
-            <a
-              href="#projects"
-              className="inline-block bg-primary text-primary-foreground px-8 py-4 text-xl font-serif rounded-lg border-2 border-primary hover:bg-transparent hover:text-primary transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md hover:-translate-y-1"
-            >
-              View My Work
-            </a>
+            <div className="relative group flex">
+              <img
+                src="/cat-look.png"
+                alt=""
+                aria-hidden="true"
+                className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 -mb-3 w-20 h-20 object-contain opacity-0 translate-y-2 scale-90 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-hover:scale-100"
+              />
+              <a
+                href="#projects"
+                className="group/btn inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 text-xl font-serif rounded-lg border-2 border-primary hover:bg-transparent hover:text-primary transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md hover:-translate-y-1"
+              >
+                View My Work
+                <ArrowDownRight
+                  className="w-5 h-5 transition-transform duration-300 group-hover/btn:translate-x-1 group-hover/btn:translate-y-1"
+                  aria-hidden="true"
+                />
+              </a>
+            </div>
             <span className="font-mono text-lg font-bold text-muted-foreground">v1.0.0</span>
           </div>
 
