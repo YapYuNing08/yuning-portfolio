@@ -106,13 +106,23 @@ const ContactSection = () => {
                 placeholder="Let's build something great..."
               />
             </div>
-            <button
-              type="submit"
-              disabled={loading || sent}
-              className="bg-primary text-primary-foreground px-8 py-4 text-xl font-serif rounded-lg border-2 border-primary hover:bg-transparent hover:text-primary transition-all duration-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              {loading ? "Sending..." : sent ? "Message Sent ✓" : "Send Message"}
-            </button>
+            <div className="flex items-end gap-4 flex-wrap">
+              <button
+                type="submit"
+                disabled={loading || sent}
+                className="bg-primary text-primary-foreground px-8 py-4 text-xl font-serif rounded-lg border-2 border-primary hover:bg-transparent hover:text-primary transition-all duration-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {loading ? "Sending..." : sent ? "Message Sent ✓" : "Send Message"}
+              </button>
+
+              <div className="flex items-center gap-3">
+                <img src="/cat-sad.png" alt="Sad cat" className="w-24 h-24 object-contain" />
+                <p className="font-mono text-sm text-muted-foreground max-w-[270px] leading-relaxed">
+                  Meow meow meow meow<br />
+                  <span className="italic">Translation:</span> "You scrolled all the way down here — don't leave this echoey inbox hanging. Say hi."
+                </p>
+              </div>
+            </div>
           </form>
         </div>
       </div>
