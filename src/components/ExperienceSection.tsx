@@ -13,7 +13,7 @@ const education = [
 
 const experience = [
   {
-    period: "Jul 2026 – Present",
+    period: "Jul 2026 – Oct 2026",
     title: "Product Manager Intern",
     place: "Ant International",
     logo: "/ant-logo.png",
